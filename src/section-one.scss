@@ -1,8 +1,9 @@
-.section-one {
+.section-introduction {
 	height: 80vh;
 	color: #fff;
-  background: linear-gradient(135deg, #204095 0%, #30afe4 36%, #59cbf2 81%, #6acce5 100%);
+  background: linear-gradient(135deg, $secondary-2 0%, $secondary-4 36%, $primary 81%, $secondary-5 100%);
 	background-size: 400% 400%;
+	z-index: 10;
 	-webkit-animation: Gradient 15s ease infinite;
 	-moz-animation: Gradient 15s ease infinite;
 	animation: Gradient 40s ease infinite;

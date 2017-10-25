@@ -1,4 +1,4 @@
-$header-height: 100px;
+$header-height: 80px;
 
 .navbar {
   width: 100%;
@@ -26,16 +26,40 @@ $header-height: 100px;
       justify-content: center;
 
       .logo {
-        height: 86px;
-        padding-top: 8px;
+        height: 65px;
+        padding-top: 5px;
         width: auto;
       }
-
     }
 
     .nav-items-wrapper {
       display: inline-flex;
       flex: 9;
+    }
+
+    .nav-button-wrapper {
+      display: flex;
+      flex: 1;
+      justify-content: center;
+      align-items: center;
+      padding-right: 2%;
+
+      button {
+        height: 45px;
+        width: 140px;
+        transition: all 0.2s ease;
+        background: linear-gradient(135deg, $secondary-4 0%, $primary 100%);
+        color: #fff;
+        border-radius: 1px;
+        cursor: pointer;
+        @include box_shadow(2)
+
+        &:hover {
+          @include box_shadow(3)
+        }
+
+      }
+
     }
 
   }
