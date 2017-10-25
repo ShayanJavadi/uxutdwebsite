@@ -1,0 +1,43 @@
+$header-height: 100px;
+
+.navbar {
+  width: 100%;
+  height: $header-height;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  @include box_shadow(1)
+
+  .navbar-lower-wrapper {
+    width: 91%;
+    display: flex;
+    margin: 0 auto;
+
+    .logo-wrapper {
+      display: inline-flex;
+      flex: 1;
+      background-color: #fff;
+      align-items: center;
+      justify-content: center;
+
+      .logo {
+        height: 86px;
+        padding-top: 8px;
+        width: auto;
+      }
+
+    }
+
+    .nav-items-wrapper {
+      display: inline-flex;
+      flex: 9;
+    }
+
+  }
+
+}

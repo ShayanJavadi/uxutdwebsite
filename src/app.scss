@@ -1,0 +1,11 @@
+@import "variables.scss";
+@import "mixins.scss";
+@import "navbar.scss";
+@import "section-one.scss";
+
+body {
+  margin: 0;
+  background-color: #f1f1f1;
+  padding-top: $header-height;
+  height: 2000px;
+}
