@@ -1,0 +1,19 @@
+{
+  "name": "uxutdwebsite",
+  "version": "1.0.0",
+  "description": "website for UX club @ UTD",
+  "main": "index.html",
+  "repository": "https://github.com/ShayanJavadi/uxutdwebsite",
+  "author": "shayanjavadi <shayanjavadi1375@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "css-loader": "^0.28.7",
+    "global": "^4.3.2",
+    "webpack": "^3.8.1"
+  },
+  "devDependencies": {
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.0"
+  }
+}
