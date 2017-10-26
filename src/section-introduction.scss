@@ -1,0 +1,103 @@
+.section-introduction {
+	height: 90vh;
+	color: #fff;
+  background: linear-gradient(135deg, $secondary-2 0%, $secondary-4 36%, $primary 81%, $secondary-5 100%);
+	background-size: 400% 400%;
+	z-index: 10;
+	-webkit-animation: Gradient 35s ease infinite;
+	-moz-animation: Gradient 35s ease infinite;
+	animation: Gradient 35s ease infinite;
+  @include box_shadow(1);
+	display: flex;
+	flex-direction: column;
+
+	.section-introduction-content-wrapper {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex: 1;
+		flex-direction: column;
+
+		.logo {
+			height: auto;
+			width: 30%;
+			max-width: 220px;
+			min-width: 180px;
+			margin-bottom: 1%;
+		}
+
+		.club-description-wrapper {
+			text-align: center;
+			width: 80%;
+			max-width: 560px;
+			justify-content: center;
+			display: flex;
+			flex-direction: column;
+			padding-top: 10px;
+			margin-bottom: 20px;
+
+			h1 {
+				margin-bottom: 10px;
+				font-size: 26px;
+			}
+
+			p {
+				font-size: 18px;
+				line-height: 1.4;
+			}
+		}
+
+		button {
+			color: $white;
+			background: transparent;
+			background-color: transparent;
+			height: 42px;
+			width: 150px;
+			border-radius: 1px;
+			border: 2px #fff solid;
+			transition: all 0.2s ease;
+			box-shadow: none;
+			&:hover {
+				@include box_shadow(1);
+			}
+		}
+
+	}
+}
+
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@-moz-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}

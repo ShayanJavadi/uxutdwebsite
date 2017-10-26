@@ -1,7 +1,8 @@
 @import "variables.scss";
 @import "mixins.scss";
+@import "common.scss";
 @import "navbar.scss";
-@import "section-one.scss";
+@import "section-introduction.scss";
 @import "section-event.scss";
 
 *:focus { outline: none; }
@@ -31,24 +32,33 @@ body {
   height: 2000px;
   font-family: 'Montserrat', sans-serif;
   color: #222;
+  -webkit-font-smoothing: antialiased;
+
 }
 
 p {
-  font-weight: 300
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 24px;
 }
 
 button {
+  font-weight: bold;
+  height: 42px;
+  width: 140px;
+  border-radius: 1px;
   background: none;
-   border: 0;
-   color: inherit;
-   /* cursor: default; */
-   font: inherit;
-   line-height: normal;
-   padding: 0;
-   -webkit-appearance: button; /* for input */
-   -webkit-user-select: none; /* for button */
-      -moz-user-select: none;
-       -ms-user-select: none;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  color: #fff;
+  font: inherit;
+  line-height: normal;
+  padding: 0;
+  -webkit-appearance: button; /* for input */
+  -webkit-user-select: none; /* for button */
+    -moz-user-select: none;
+     -ms-user-select: none;
 }
 
 li {
@@ -62,18 +72,11 @@ li {
   font-size: 16px;
   padding: 20px;
   font-weight: 700;
-  color: $secondary-4;
   cursor: pointer;
 }
 
 ol, ul {
   list-style: none;
-  flex: 1;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: row;
-  display: flex;
   padding: 0;
   margin: 0;
-  padding-left: 10%;
 }
