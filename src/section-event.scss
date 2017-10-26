@@ -24,17 +24,20 @@
 
      h1 {
        font-size: 250%;
-       padding-bottom: 20px;
+       padding-bottom: 5px;
      }
 
+     p:first-of-type {
+       padding-bottom: 10px;
+     }
+     
      p {
        padding-bottom: 20px;
-       line-height: 24px;
      }
 
      .event-location {
        font-size: 18px;
-       color: #333;
+       color: #444;
      }
    }
 
