@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
-    <link rel="stylesheet" href="./lib/styles.css">
     <title>UX UTD</title>
   </head>
   <body>
@@ -11,14 +10,14 @@
       <nav class="navbar">
         <div class="navbar-lower-wrapper">
           <div class="logo-wrapper">
-            <img src="./assets/images/logo-with-tagline.png" alt="UX UTD logo" class="logo">
+            <img src="./assets/images/logo-with-tagline.png" alt="UX UTD logo" class="logo" id="introduction-node">
           </div>
           <div class="nav-items-wrapper">
             <ul>
-              <li>Events</li>
-              <li>Join</li>
-              <li>Sponsors</li>
-              <li>Contact</li>
+              <li id="events-node">Events</li>
+              <li id="sponsors-node">Sponsors</li>
+              <li id="join-node">Join</li>
+              <li id="contact-node">Contact</li>
             </ul>
           </div>
           <div class="nav-button-wrapper">
@@ -27,18 +26,18 @@
         </div>
       </nav>
     </header>
-    <div class="section-introduction">
+    <div class="section-introduction" id="introduction">
       <div class="section-introduction-content-wrapper">
-        <img src="./assets/images/logo-white.png" alt="UX UTD logo" class="logo">
+        <img src="./assets/images/logo-white.png" alt="UX UTD logo" class="logo move-up fade-in one">
 
         <div class="club-description-wrapper">
-          <h1>The UX Club at UT Dallas aims to increase consciousness of User-Centered Design.<h1>
-          <p>Every experience you encounter with a product, service, or brand impacts your life. Possessing empathy, problem solving skills, and creative innovation are our core values that perfect people’s experiences.</p>
+          <h1 class="move-up fade-in two">The UX Club at UT Dallas aims to increase consciousness of User-Centered Design.<h1>
+          <p class="move-up fade-in three">Every experience you encounter with a product, service, or brand impacts your life. Possessing empathy, problem solving skills, and creative innovation are our core values that perfect people’s experiences.</p>
         </div>
-        <button type="button" name="button">Do Thing</button>
+        <button type="button" name="button" class="move-up fade-in four">Do Thing</button>
       </div>
     </div>
-    <section class="section-event">
+    <div class="section-event" id="events">
       <div class="section-event-left">
         <h1>Adobe Max</h1>
         <p class="event-date">Thurs 10/19, 12:00 - 1:30 PM · JO 4.614</p>
@@ -48,7 +47,50 @@
       <div class="section-event-right">
         <img src="./assets/images/ux-adobe.png" alt="UX UTD logo" class="logo">
       </div>
-    </section>
+    </div>
+    <div class="section-placeholder">
+      <h1>Content section <br> placeholder</h1>
+    </div>
+    <div class="section-sponsors" id="sponsors">
+      <div class="sponsors-title-wrapper">
+        <h1>Sponsors</h1>
+        <p>Interested in becoming a sponsor?</p>
+        <p>Check out our <u>sponsorship packet</u> or email us at uxutdallas@gmail.com</p>
+        <img src="./assets/images/sponsors/adobe-logo.png" alt="adobe logo" class="sponsor-logo">
+      </div>
+      <div class="sponsors">
+        <div class="sponsors-row">
+          <div class="sponsor">
+            <img src="./assets/images/sponsors/adobe-logo.png" alt="adobe" class="sponsor-logo">
+          </div>
+          <div class="sponsor">
+            <img src="./assets/images/sponsors/capital-one-logo.png" alt="capital one" class="sponsor-logo">
+          </div>
+          <div class="sponsor">
+            <img src="./assets/images/sponsors/credera-logo.png" alt="credera" class="sponsor-logo">
+          </div>
+          <div class="sponsor">
+            <img src="./assets/images/sponsors/project202-logo.png" alt="projekt202" class="sponsor-logo">
+          </div>
+        </div>
+        <div class="sponsors-row">
+          <div class="sponsor">
+            <img src="./assets/images/sponsors/big-design-logo.jpg" alt="big design" class="sponsor-logo">
+          </div>
+          <div class="sponsor">
+            <img src="./assets/images/sponsors/ladies-that-ux.png" alt="ladies that ux" class="sponsor-logo">
+          </div>
+          <div class="sponsor">
+            <img src="./assets/images/sponsors/uxpa-logo.png" alt="uxpa" class="uxpa-logo sponsor-logo">
+          </div>
+          <div class="sponsor">
+            <img src="./assets/images/sponsors/universal-mind-logo.png" alt="universal mind" class="sponsor-logo">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+    </div>
     <script src="./lib/bundle.js"></script>
   </body>
 </html>
