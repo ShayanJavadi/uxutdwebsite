@@ -21,11 +21,11 @@ header {
   position: relative;
   background-color: #fff;
   margin: 0 auto;
+  padding: 0 10%;
 
   .navbar-lower-wrapper {
-    width: 91%;
     display: flex;
-    margin: 0 auto;
+    width: 100%;
 
     .logo-wrapper {
       display: inline-flex;
