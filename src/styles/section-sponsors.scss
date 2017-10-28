@@ -5,10 +5,10 @@
   -webkit-box-shadow: inset 0 8px 4px -4.5px rgba(0,0,0,0.02);
    -moz-box-shadow: inset 0 8px 4px -4.5px rgba(0,0,0,0.02);
    box-shadow: inset 0 8px 4px -4.5px rgba(0,0,0,0.02);
-
+  .section-sponsors-content-wrapper {
+    flex-direction: column;
+  }
   .sponsors-title-wrapper {
-    margin-left: 10%;
-
     h1 {
       margin-bottom: 5px;
     }
@@ -23,7 +23,6 @@
 
     .sponsors-row {
       height: 30px;
-      margin: 0 5%;
       display: flex;
       flex: 1;
       flex-direction: row;

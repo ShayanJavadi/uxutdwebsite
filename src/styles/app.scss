@@ -3,7 +3,7 @@
 @import "common.scss";
 @import "navbar.scss";
 @import "section-introduction.scss";
-@import "section-event.scss";
+@import "section-events.scss";
 @import "section-sponsors.scss";
 @import "footer.scss";
 
@@ -31,7 +31,7 @@ body {
   margin: 0;
   background-color: #f1f1f1;
   padding-top: $header-height;
-  height: 2000px;
+  height: 2500px;
   font-family: 'Montserrat', sans-serif;
   color: #222;
   -webkit-font-smoothing: antialiased;
@@ -94,8 +94,11 @@ ol, ul {
 	background-color: #fcfcfc;
 	height: 40vh;
 	padding-top: 6%;
+	display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
 	-webkit-box-shadow: inset 0 8px 4px -6px rgba(0,0,0,0.02);
 	 -moz-box-shadow: inset 0 8px 4px -6px rgba(0,0,0,0.02);
 	 box-shadow: inset 0 8px 4px -6px rgba(0,0,0,0.02);
-	 padding-left: 10%;
 }

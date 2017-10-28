@@ -49,3 +49,11 @@
     animation-delay: .8s;
   }
 }
+
+.section-content-wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 10%;
+  display: flex;
+  flex: 1;
+}

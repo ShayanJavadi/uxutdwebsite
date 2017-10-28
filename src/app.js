@@ -1,5 +1,5 @@
 import jump from 'jump.js';
-require('./app.scss');
+require('./styles/app.scss');
 
 document.addEventListener('DOMContentLoaded', function() {
   const App = new Application;
@@ -8,6 +8,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 class Application {
+  constructor() {
+    this.state = {
+      anchorNavigating: false,
+    }
+  }
 
   handleAnchorNavigation() {
     const nodes = ["introduction", "events", "sponsors"]
@@ -15,9 +20,18 @@ class Application {
     nodes.map((node) => {
       const trigger =  document.querySelector(`#${node}-node`);
       const target = document.querySelector(`#${node}`);
-      trigger.addEventListener("click", () => jump(target, {
-        offset: -80,
-      }));
+
+      trigger.addEventListener("click", () => {
+        if (!this.state.anchorNavigating) {
+          this.state.anchorNavigating = true;
+
+          jump(target, {
+            offset: -80,
+            callback: () => this.state.anchorNavigating = false,
+          });
+        }
+      });
     })
   }
+
 }

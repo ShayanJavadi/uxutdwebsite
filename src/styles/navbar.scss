@@ -1,15 +1,26 @@
-.navbar {
+header {
   width: 100%;
   height: $header-height;
-  flex: 1;
-  display: flex;
-  flex-direction: row;
-  position: fixed;
   z-index: 10;
   top: 0;
   left: 0;
   background-color: #fff;
+  display: flex;
+  flex-direction: row;
+
   @include box_shadow(1)
+  position: fixed;
+}
+
+.navbar {
+  max-width: 1440px;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  background-color: #fff;
+  margin: 0 auto;
 
   .navbar-lower-wrapper {
     width: 91%;
