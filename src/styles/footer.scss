@@ -53,6 +53,25 @@
         flex: 1;
         padding-right: 5px;
         padding-bottom: 70px;
+        .responses-wrapper {
+          top: 5px;
+          position: relative;
+          height: 1px;
+          .error {
+            color: #ff003d;
+          }
+
+          .success {
+            color: $primary;
+          }
+
+          .response {
+            font-size: 12px;
+            display: block;
+            padding-top: 5px;
+          }
+        }
+
         .header-container {
           padding-bottom: 10px;
 
@@ -170,7 +189,20 @@
       display: flex;
       justify-content: flex-end;
       flex: 1;
-
+      .email {
+        text-decoration: none;
+        padding-top: 1px;
+        p {
+          font-size: 12px;
+          font-weight: 700;
+          color: #fff;
+          opacity: 1;
+          transition: all 0.2s;
+          &:hover {
+            opacity: 0.5;
+          }
+        }
+      }
       .fa {
         color: #fff;
         font-size: 30px;
