@@ -1,5 +1,6 @@
 import jump from 'jump.js';
 import { styler, timeline, listen, easing } from "popmotion";
+import test from "./test.js";
 require('./styles/app.scss');
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -7,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
   App.handleAnchorNavigation();
   App.handleEmbeddedSocialMedia();
   App.handleJoinUsModal();
+  App.handleMobileNavigation();
 }, false);
 
 
@@ -14,6 +16,8 @@ class Application {
   constructor() {
     this.state = {
       anchorNavigating: false,
+      modalOpen: false,
+      mobileNavOpen: false,
     }
   }
 
@@ -58,6 +62,22 @@ class Application {
     }(document, 'script', 'facebook-jssdk'));
   }
 
+  handleMobileNavigation() {
+    const navigationButton = document.querySelector('.mobile-menu-trigger');
+    const mobileNavigationContainer = document.querySelector(".mobile-navigation");
+    const shade = document.querySelector('.mobile-nav-shade');
+    const mobileNavigationItems = document.querySelectorAll(".mobile-nav-li");
+
+    const toggleMobileNavigation = () => {
+      [navigationButton, mobileNavigationContainer, shade].map((e) => {
+        e.classList.toggle("is-active");
+      })
+    }
+
+    mobileNavigationItems.forEach((e) => e.addEventListener("click", () => toggleMobileNavigation()));
+    navigationButton.addEventListener("click", () => toggleMobileNavigation());
+  }
+
   handleJoinUsModal() {
     const openModalButton = document.querySelector('.open-modal');
     const cancelModalButton = document.querySelector('.modal-cancel');
@@ -95,6 +115,7 @@ class Application {
     };
 
     const openModal = () => {
+      this.state.modalOpen = true;
       showContainers();
 
       timeline([

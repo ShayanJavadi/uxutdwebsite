@@ -69,6 +69,11 @@ header {
         flex-direction: row;
         display: flex;
         padding-left: 7%;
+
+        @media screen and (max-width: 950px) {
+          display: none;
+        }
+
         div {
           height: 100%;
           display: flex;
