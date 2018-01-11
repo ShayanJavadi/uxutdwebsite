@@ -1,6 +1,5 @@
 import jump from 'jump.js';
 import { styler, timeline, listen, easing } from "popmotion";
-import test from "./test.js";
 require('./styles/app.scss');
 
 document.addEventListener('DOMContentLoaded', function() {
