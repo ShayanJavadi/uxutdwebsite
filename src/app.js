@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
   App.handleEmbeddedSocialMedia();
   App.handleJoinUsModal();
   App.handleMobileNavigation();
+  App.subscribeToBrowserWidthChange();
 }, false);
 
 
@@ -17,7 +18,34 @@ class Application {
       anchorNavigating: false,
       modalOpen: false,
       mobileNavOpen: false,
+      embeddedSocialMediaIsAdded: false,
     }
+
+    this.handleBrowserWidthChange = this.addEmbeddedSocialMediaIfNeeded.bind(this);
+    this.mobileWidth = 950;
+  }
+
+  static isMobileDevice() {
+    return (typeof window.orientation !== "undefined") ||
+    (navigator.userAgent.indexOf('IEMobile') !== -1) ||
+    window.innerWidth <= this.mobileWidth;
+  }
+
+  addEmbeddedSocialMediaIfNeeded(e) {
+    const width = e.target.innerWidth;
+    if (width > this.mobileWidth && !this.state.embeddedSocialMediaIsAdded) {
+      this.handleEmbeddedSocialMedia();
+    }
+  }
+
+  subscribeToBrowserWidthChange = () => {
+    if (this.constructor.isMobileDevice()) {
+      window.addEventListener("resize", this.handleBrowserWidthChange);
+    }
+  }
+
+  unsubscribeFromBrowserWidthChange = () => {
+    window.removeEventListener("resize", this.handleBrowserWidthChange);
   }
 
   handleAnchorNavigation() {
@@ -43,22 +71,26 @@ class Application {
   }
 
   handleEmbeddedSocialMedia() {
-    // TWITTER
-    const script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src = "https://platform.twitter.com/widgets.js";
-    script.async = true;
-    document.getElementsByTagName("head")[0].appendChild(script);
+    if (!this.constructor.isMobileDevice()) {
+      this.state.embeddedSocialMediaIsAdded = true;
+      this.unsubscribeFromBrowserWidthChange();
+      // TWITTER
+      const script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src = "https://platform.twitter.com/widgets.js";
+      script.async = true;
+      document.getElementsByTagName("head")[0].appendChild(script);
 
-    // FACEBOOK
-    (function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.async = true;
-      js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11&appId=122107125107711';
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
+      // FACEBOOK
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.async = true;
+        js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11&appId=122107125107711';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    }
   }
 
   handleMobileNavigation() {

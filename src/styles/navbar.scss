@@ -56,6 +56,10 @@ header {
         @media screen and (max-width: $break-huge - 200px) {
           height: 44px;
         }
+
+        @media screen and (max-width: 420px) {
+          height: 36px;
+        }
       }
     }
 

@@ -31,6 +31,11 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @media screen and (max-width: 950px) {
+      width: 60%;
+    }
+
     .footer-email-signup-form-container {
       form {
         .input-container {
@@ -82,6 +87,7 @@
         }
       }
     }
+
     .modal-cancel {
       position: absolute;
       transform: translateY(0px) translateZ(0px);
@@ -94,8 +100,13 @@
       color: #555;
       transition: all 0.2s;
       width: 25px;
+
       &:hover {
         color: #222;
+      }
+
+      @media screen and (max-width: 420px) {
+        left: 89%;
       }
     }
 
