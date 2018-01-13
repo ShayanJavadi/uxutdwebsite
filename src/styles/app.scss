@@ -41,10 +41,20 @@ body {
 
 h1 {
 	font-size: 250%;
+	@media screen and (max-width: $break-huge - 200px) {
+		font-size: 230%;
+	}
+
+	@media screen and (max-width: $break-medium) {
+		font-size: 200%;
+	}
 }
 
 h2 {
 	font-size: 160%;
+	@media screen and (max-width: $break-medium) {
+		font-size: 145%;
+	}
 }
 
 p {
