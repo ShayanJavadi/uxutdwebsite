@@ -36,6 +36,10 @@
       width: 60%;
     }
 
+    @media screen and (max-width: 830px) {
+      width: 70%;
+    }
+
     .footer-email-signup-form-container {
       form {
         .input-container {
