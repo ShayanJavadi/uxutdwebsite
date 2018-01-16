@@ -72,8 +72,17 @@ h2 {
 
 p {
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 28px;
+	@media screen and (max-width: 950px) {
+		line-height: 26px;
+	}
+
+	@media screen and (max-width: 550px) {
+		font-size: 15px;
+		line-height: 24px;
+	}
+
 }
 
 u {
