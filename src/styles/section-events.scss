@@ -33,7 +33,7 @@
      @media screen and (max-width: 950px) {
        flex-flow: column-reverse;
        &:first-of-type {
-         margin-bottom: 15px;
+         margin-bottom: 0px;
        }
      }
 
@@ -45,14 +45,14 @@
        height: 100%;
        justify-content: center;
        @media screen and (max-width: 950px) {
-         min-height: 350px;
+         min-height: 315px;
          justify-content: baseline;
          margin-bottom: 0px;
        }
 
 
        @media screen and (max-width: 550px) {
-         min-height: 350px;
+         min-height: 370px;
          justify-content: baseline;
          margin-bottom: 0px;
        }
