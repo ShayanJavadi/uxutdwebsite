@@ -57,6 +57,12 @@
          margin-bottom: 0px;
        }
 
+       @media screen and (max-width: 450px) {
+         min-height: 390px;
+         justify-content: baseline;
+         margin-bottom: 0px;
+       }
+
        p:first-of-type {
          padding-bottom: 15px;
        }
